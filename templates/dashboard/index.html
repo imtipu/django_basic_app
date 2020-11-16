@@ -1,1 +1,17 @@
 {% extends  'base.html' %}
+{% load dashboard_home_tags %}
+{% block main %}
+    <div class="row mt-5">
+    {% home_counters as counters %}
+        <div class="col-md-3">
+
+            <div class="card text-white bg-dark mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Users</h5>
+                    <h1>{{ counters.total_users }}</h1>
+{#                    <p>{{ home_counters }}</p>#}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
