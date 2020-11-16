@@ -1,4 +1,4 @@
-from allauth.account.views import SignupView, LoginView, LogoutView, PasswordChangeView
+from allauth.account.views import SignupView, LoginView, LogoutView, PasswordChangeView, PasswordResetView
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 
@@ -30,3 +30,7 @@ class AccountLogout(LogoutView):
 
 class AccountPasswordChange(PasswordChangeView):
     template_name = 'users/password_change.html'
+
+
+class AccountPasswordReset(PasswordResetView):
+    template_name = 'users/password_reset.html'
