@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 INSTALLED_APPS += [
     'allauth',
     'allauth.account',
+    'allauth.socialaccount',
     'bootstrap4',
     'users.apps.UsersConfig',
     'dashboard.apps.DashboardConfig',
@@ -117,6 +118,8 @@ AUTHENTICATION_BACKENDS = [
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
+
+LOGOUT_REDIRECT_URL = '/accounts/login'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
